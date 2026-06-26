@@ -1,3 +1,14 @@
+error id: file://<HOME>/Documentos/Beca%20Java%20Skill%20Banco%20de%20Chile/Estudio%20SPRING/cores/Core%20Canciones/canciones/src/main/java/com/karen/canciones/controladores/ControladorCanciones.java:_empty_/Valid#
+file://<HOME>/Documentos/Beca%20Java%20Skill%20Banco%20de%20Chile/Estudio%20SPRING/cores/Core%20Canciones/canciones/src/main/java/com/karen/canciones/controladores/ControladorCanciones.java
+empty definition using pc, found symbol in pc: _empty_/Valid#
+empty definition using semanticdb
+empty definition using fallback
+non-local guesses:
+
+offset: 1445
+uri: file://<HOME>/Documentos/Beca%20Java%20Skill%20Banco%20de%20Chile/Estudio%20SPRING/cores/Core%20Canciones/canciones/src/main/java/com/karen/canciones/controladores/ControladorCanciones.java
+text:
+```scala
 package com.karen.canciones.controladores;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -40,7 +51,7 @@ public class ControladorCanciones {
 	}
 	
 	@PostMapping("/canciones/procesa/agregar")
-	public String procesarAgregarCancion(@Valid @ModelAttribute("cancion") Cancion cancion, BindingResult result) {
+	public String procesarAgregarCancion(@@@Valid @ModelAttribute("cancion") Cancion cancion, BindingResult result) {
 		if (result.hasErrors()) {
 			return "agregarCancion.jsp";
 		}
@@ -48,3 +59,10 @@ public class ControladorCanciones {
 		return "redirect:/canciones";
 	}
 }
+
+```
+
+
+#### Short summary: 
+
+empty definition using pc, found symbol in pc: _empty_/Valid#
