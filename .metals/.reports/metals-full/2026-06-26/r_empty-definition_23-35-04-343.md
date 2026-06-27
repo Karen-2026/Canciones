@@ -1,3 +1,14 @@
+error id: file://<HOME>/Documentos/Beca%20Java%20Skill%20Banco%20de%20Chile/Estudio%20SPRING/cores/Core%20Canciones/canciones/src/main/java/com/karen/canciones/controladores/ControladorCanciones.java:
+file://<HOME>/Documentos/Beca%20Java%20Skill%20Banco%20de%20Chile/Estudio%20SPRING/cores/Core%20Canciones/canciones/src/main/java/com/karen/canciones/controladores/ControladorCanciones.java
+empty definition using pc, found symbol in pc: 
+empty definition using semanticdb
+empty definition using fallback
+non-local guesses:
+
+offset: 2531
+uri: file://<HOME>/Documentos/Beca%20Java%20Skill%20Banco%20de%20Chile/Estudio%20SPRING/cores/Core%20Canciones/canciones/src/main/java/com/karen/canciones/controladores/ControladorCanciones.java
+text:
+```scala
 package com.karen.canciones.controladores;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -71,11 +82,18 @@ public class ControladorCanciones {
 	}
 
 	@DeleteMapping("/canciones/eliminar/{id}")
-	public String procesarEliminarCancion(@PathVariable("id") Long id){
-		servicio.eliminarCancion(id);
+	public String@@ procesarEliminarCancion(@PathVariable("id") Long idCancion){
+		servicio.eliminarCancion(idCancion);
 		return "redirect:/canciones";
 	}
 
-
+	 
 
 }
+
+```
+
+
+#### Short summary: 
+
+empty definition using pc, found symbol in pc: 

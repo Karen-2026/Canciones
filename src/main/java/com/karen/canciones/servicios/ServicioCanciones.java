@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.karen.canciones.models.Cancion;
 import com.karen.canciones.repositorios.RepositorioCanciones;
@@ -31,8 +32,8 @@ public class ServicioCanciones {
         return this.repoCanciones.save(cancion);
     }
 
-
-
-
+	public void eliminarCancion(Long id) {
+        this.repoCanciones.deleteById(id);
+	}
 }
 
