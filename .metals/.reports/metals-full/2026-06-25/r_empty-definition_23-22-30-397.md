@@ -1,3 +1,14 @@
+error id: file://<HOME>/Documentos/Beca%20Java%20Skill%20Banco%20de%20Chile/Estudio%20SPRING/cores/Core%20Canciones/canciones/src/main/java/com/karen/canciones/controladores/ControladorCanciones.java:_empty_/HttpSession#getAttribute#
+file://<HOME>/Documentos/Beca%20Java%20Skill%20Banco%20de%20Chile/Estudio%20SPRING/cores/Core%20Canciones/canciones/src/main/java/com/karen/canciones/controladores/ControladorCanciones.java
+empty definition using pc, found symbol in pc: _empty_/HttpSession#getAttribute#
+empty definition using semanticdb
+empty definition using fallback
+non-local guesses:
+
+offset: 1951
+uri: file://<HOME>/Documentos/Beca%20Java%20Skill%20Banco%20de%20Chile/Estudio%20SPRING/cores/Core%20Canciones/canciones/src/main/java/com/karen/canciones/controladores/ControladorCanciones.java
+text:
+```scala
 package com.karen.canciones.controladores;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -51,24 +62,33 @@ public class ControladorCanciones {
 	}
 
 	@GetMapping("/canciones/formulario/editar/{idCancion}")
-	public String formularioEditarCancion(@PathVariable("idCancion") Long idCancion, Model modelo) {
+	public String formEditar(@PathVariable("idCancion") Long id, HttpSession sesion, Model modelo) {
 
-		Cancion cancion = servicio.obtenerCancionPorId(idCancion);
-		modelo.addAttribute("cancion", cancion);
+		Cancion c = (Cancion) sesion.getAttrib@@ute("cancion");
+		if (c == null) {
+			return "redirect:/canciones";
+		}
+		modelo.addAttribute("cancion", servicio.obtenerCancionPorId());
 		return "editarCancion.jsp";
 		}
 
-	@PutMapping("/canciones/procesa/editar/{idCancion}")
-	public String editar(@PathVariable("idCancion") Long idCancion, @Valid @ModelAttribute("cancion") Cancion cancion, BindingResult result) {
+	@PutMapping("/edit")
+	public String editar(@Valid @ModelAttribute("videojuego") Videojuego videojuego, BindingResult validaciones) {
 
-		if (result.hasErrors()) {
-			return "editarCancion.jsp";
+		if (validaciones.hasErrors()) {
+			return "editar.jsp";
 		}
-		cancion.setId(idCancion);
-		servicio.actualizarCancion(cancion);
-		return "redirect:/canciones";
+		this.servicioVideojuegos.crearModificarVideojuego(videojuego);
+		return "redirect:/getAll";
 	}
 
 
 
 }
+
+```
+
+
+#### Short summary: 
+
+empty definition using pc, found symbol in pc: _empty_/HttpSession#getAttribute#
